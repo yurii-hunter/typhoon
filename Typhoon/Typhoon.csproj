@@ -100,9 +100,9 @@
     <Compile Include="Infrastructure\Locators\Locator.cs" />
     <Compile Include="Infrastructure\Locators\LocatorConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tools\Do.cs" />
-    <Compile Include="Tools\Extensions.cs" />
-    <Compile Include="Tools\Wait.cs" />
+    <Compile Include="Utils\Do.cs" />
+    <Compile Include="Utils\Extensions.cs" />
+    <Compile Include="Utils\Wait.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

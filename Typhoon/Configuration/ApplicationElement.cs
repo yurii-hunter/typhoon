@@ -7,7 +7,7 @@ namespace Typhoon.Configuration
         [ConfigurationProperty("baseUrl", IsRequired = true)]
         public string BaseUrl
         {
-            get { return this["name"].ToString(); }
+            get { return this["baseUrl"].ToString(); }
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Typhoon.Configuration
             return configurationSection as TyphoonSection;
         }
 
-        private static void ThrowAnErrorIfReportalPortalConfigurationSectionIsNull()
+        private static void ThrowAnErrorIfTyphoonConfigurationSectionIsNull()
         {
             if (MacroSpecFlowSection.Value == null)
                 throw new ConfigurationErrorsException("No 'typhoon' section in config file!");
@@ -31,7 +31,7 @@ namespace Typhoon.Configuration
         {
             get
             {
-                ThrowAnErrorIfReportalPortalConfigurationSectionIsNull();
+                ThrowAnErrorIfTyphoonConfigurationSectionIsNull();
                 return MacroSpecFlowSection.Value;
             }
         }
