@@ -16,7 +16,8 @@ namespace Typhoon.Infrastructure.Locators
 
         public override IWebElement FindElement(ISearchContext context)
         {
-            if (GetJavaScriptObject(context, 0) is IWebElement element) return element;
+            var element = GetJavaScriptObject(context, 0);
+            if (element is IWebElement) return (IWebElement) element;
             throw new NoSuchElementException("No element found with jQuery command: jQuery" + _selector);
         }
 
