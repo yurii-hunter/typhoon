@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{876D88EA-3E6B-4F55-BA70-43EFE9D66898}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Typhoon</RootNamespace>
+    <AssemblyName>Typhoon</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JetBrains.Annotations">
+      <HintPath>..\packages\JetBrains.Annotations.10.2.1\lib\net\JetBrains.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=3.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.11.2\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.11.2\lib\net45\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behavior\ElementBehaviorExtension.cs" />
+    <Compile Include="Behavior\IBehavior.cs" />
+    <Compile Include="Behavior\MouseBehavior.cs" />
+    <Compile Include="Configuration\ApplicationElement.cs" />
+    <Compile Include="Configuration\TimeoutElement.cs" />
+    <Compile Include="Configuration\TyphoonConfig.cs" />
+    <Compile Include="Configuration\TyphoonSection.cs" />
+    <Compile Include="Configuration\WebDriverElement.cs" />
+    <Compile Include="Controls\Abstract\IButton.cs" />
+    <Compile Include="Controls\Abstract\ICheckBox.cs" />
+    <Compile Include="Controls\Abstract\ISelect.cs" />
+    <Compile Include="Controls\Abstract\ITextBox.cs" />
+    <Compile Include="Controls\Button.cs" />
+    <Compile Include="Controls\CheckBox.cs" />
+    <Compile Include="Controls\Select.cs" />
+    <Compile Include="Controls\TextBox.cs" />
+    <Compile Include="Infrastructure\BaseTypes\Collections\HtmlElementsCollection.cs" />
+    <Compile Include="Infrastructure\BaseTypes\Collections\IHtmlElementsCollection.cs" />
+    <Compile Include="Infrastructure\BaseTypes\Element\HtmlElement.cs" />
+    <Compile Include="Infrastructure\BaseTypes\Element\IHtmlElement.cs" />
+    <Compile Include="Infrastructure\BaseTypes\Page\IWebPage.cs" />
+    <Compile Include="Infrastructure\BaseTypes\Page\WebPage.cs" />
+    <Compile Include="Infrastructure\Driver\DriverService.cs" />
+    <Compile Include="Infrastructure\Driver\IJavaScriptExecutor.cs" />
+    <Compile Include="Infrastructure\Driver\IWebDriver.cs" />
+    <Compile Include="Infrastructure\Driver\WebDriver.cs" />
+    <Compile Include="Infrastructure\ElementNotFoundException.cs" />
+    <Compile Include="Infrastructure\Extensions\WaitExtensions.cs" />
+    <Compile Include="Infrastructure\Extensions\WebDriverExtensions.cs" />
+    <Compile Include="Infrastructure\Extensions\WebElementExtensions.cs" />
+    <Compile Include="Infrastructure\Factory\CollectionFactory.cs" />
+    <Compile Include="Infrastructure\Factory\ElementFactory.cs" />
+    <Compile Include="Infrastructure\Factory\FindByAttribute.cs" />
+    <Compile Include="Infrastructure\Factory\PageFactory.cs" />
+    <Compile Include="Infrastructure\Factory\PropertyExtension.cs" />
+    <Compile Include="Infrastructure\Factory\SearchStrategy.cs" />
+    <Compile Include="Infrastructure\Factory\UrlAttribute.cs" />
+    <Compile Include="Infrastructure\INative.cs" />
+    <Compile Include="Infrastructure\ISearchable.cs" />
+    <Compile Include="Infrastructure\Locators\By.cs" />
+    <Compile Include="Infrastructure\Locators\ByJquery.cs" />
+    <Compile Include="Infrastructure\Locators\How.cs" />
+    <Compile Include="Infrastructure\Locators\Locator.cs" />
+    <Compile Include="Infrastructure\Locators\LocatorConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Do.cs" />
+    <Compile Include="Utils\Extensions.cs" />
+    <Compile Include="Utils\Wait.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

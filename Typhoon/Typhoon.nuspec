@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Typhoon</id>
+    <version>$version$</version>
+    <title>Typhoon framework</title>
+    <authors>Yurii Hunter</authors>
+    <owners>Yurii Hunter</owners>
+    <iconUrl>https://yurii-hunter.github.io/typhoon/img/typhoon.png</iconUrl>
+    <licenseUrl>https://yurii-hunter.github.io/typhoon/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Automation test framework</description>
+    <copyright>Copyright 2018</copyright>
+    <tags>Selenium PageFactory Framework</tags>
+    <dependencies>
+      <dependency id="Selenium.WebDriver" version="3.11.2"/>
+      <dependency id="Selenium.Support" version="3.11.2"/>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Configuration" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src=".\tools\" target="tools" />
+    <file src=".\content\" target="content" />
+    <file src=".\bin\Debug\Typhoon.dll" target="lib" />
+  </files>
+</package>

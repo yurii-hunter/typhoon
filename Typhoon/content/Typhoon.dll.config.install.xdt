@@ -1,0 +1,10 @@
+﻿<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <configSections xdt:Transform="InsertIfMissing">
+    <section name="typhoon" type="Typhoon.Configuration.TyphoonSection, Typhoon, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" xdt:Transform="InsertIfMissing" />
+  </configSections>
+  <typhoon xdt:Transform="InsertIfMissing">
+    <timeout explicitWait="25" implicitWait="5" existsWait="2" xdt:Transform="InsertIfMissing"/>
+    <webDriver name="chrome" xdt:Transform="InsertIfMissing"/>
+    <application baseUrl="http://baseurl.com" xdt:Transform="InsertIfMissing"/>
+  </typhoon>
+</configuration>
