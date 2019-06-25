@@ -36,11 +36,13 @@ All settings are stored in *Typhoon.dll.config* file which was added into your p
 |existsWait|The max time that factory waits for checking that element exists  |
 
 **\<webDriver\>**
+
 | Property|                  Description               |
 |---------|--------------------------------------------|
 |name| Type of web driver. Could be one of *chrome*, *firefox*, *iexploler* |
 
 **\<application\>**
+
 | Property|                  Description               |
 |---------|--------------------------------------------|
 |baseUrl| |The base URL of your application|
